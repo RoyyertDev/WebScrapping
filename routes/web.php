@@ -48,7 +48,7 @@ Route::get('/apiTest', function () {
         echo "Error en la solicitud cURL: " . curl_error($ch);
     } else {
         $decodedResponse = json_decode($response, true);
-        dd($decodedResponse['choices'][0]['message']['content']); // Mostrar la respuesta de la API
+        dd($decodedResponse); // Mostrar la respuesta de la API
     }
 
     curl_close($ch);
